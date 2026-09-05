@@ -1,0 +1,53 @@
+{
+  "selection_partition": "C:\\Users\\chaud\\OneDrive\\Desktop\\risk-sentinel\\ml\\artifacts\\online_v4_calibration.parquet",
+  "future_test_partition": "C:\\Users\\chaud\\OneDrive\\Desktop\\risk-sentinel\\ml\\artifacts\\online_v4_test.parquet",
+  "selection": {
+    "name": "selection",
+    "rows": 88581,
+    "columns": 13,
+    "transaction_id_unique": 88581,
+    "transaction_id_duplicates": 0,
+    "transaction_id_nulls": 0,
+    "transaction_dt_min": 10438003,
+    "transaction_dt_max": 13151840,
+    "fraud_rows": 3042,
+    "fraud_rate": 0.03434145019812375,
+    "amount_total": 11947493.694000002
+  },
+  "future_test": {
+    "name": "future_test",
+    "rows": 88581,
+    "columns": 13,
+    "transaction_id_unique": 88581,
+    "transaction_id_duplicates": 0,
+    "transaction_id_nulls": 0,
+    "transaction_dt_min": 13151880,
+    "transaction_dt_max": 15811131,
+    "fraud_rows": 3083,
+    "fraud_rate": 0.03480430340592226,
+    "amount_total": 12148754.186
+  },
+  "transaction_id_audit": {
+    "selection_unique_ids": 88581,
+    "future_test_unique_ids": 88581,
+    "overlap_count": 0,
+    "overlap_sample": [],
+    "pass": true
+  },
+  "fingerprint_audit": {
+    "selection_unique_fingerprints": 88581,
+    "future_test_unique_fingerprints": 88581,
+    "overlap_count": 0,
+    "overlap_sample": [],
+    "pass": true
+  },
+  "temporal_audit": {
+    "selection_min": 10438003,
+    "selection_max": 13151840,
+    "future_test_min": 13151880,
+    "future_test_max": 15811131,
+    "ranges_overlap": false,
+    "note": "Temporal range overlap is diagnostic only. The primary integrity criterion is row-level disjointness."
+  },
+  "status": "PASS"
+}

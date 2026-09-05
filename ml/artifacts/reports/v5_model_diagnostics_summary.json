@@ -1,0 +1,128 @@
+{
+  "model": "fraud-online-v5",
+  "future_test_rows": 88581,
+  "future_fraud_rate": 0.03480430340592226,
+  "calibration": {
+    "raw_brier": 0.18918692360709963,
+    "calibrated_brier": 0.03202783638158209,
+    "brier_improvement": 0.15715908722551752,
+    "raw_ece": 0.3627216777275314,
+    "calibrated_ece": 0.0032147324228503156
+  },
+  "extreme_probabilities": {
+    "calibrated_zero": 624,
+    "calibrated_one": 3,
+    "calibrated_ge_090": 3,
+    "calibrated_ge_070": 3,
+    "calibrated_ge_040": 116
+  },
+  "policy": {
+    "loss_given_fraud": 0.8,
+    "hold_probability": 0.9,
+    "review_probability": 0.7,
+    "verify_probability": 0.4,
+    "hold_expected_loss": 1000.0,
+    "review_expected_loss": 500.0,
+    "verify_expected_loss": 100.0
+  },
+  "feature_importance": [
+    {
+      "feature": "device_transactions_1h",
+      "mean_abs_shap": 0.38139769688526903,
+      "mean_signed_shap": -0.13869313816194256,
+      "catboost_importance": 17.07542263369392
+    },
+    {
+      "feature": "amount",
+      "mean_abs_shap": 0.31391617365918406,
+      "mean_signed_shap": -0.11707794499968993,
+      "catboost_importance": 21.781341699672705
+    },
+    {
+      "feature": "ip_customer_count",
+      "mean_abs_shap": 0.2509440507942435,
+      "mean_signed_shap": 0.09261815664826185,
+      "catboost_importance": 14.995191909243367
+    },
+    {
+      "feature": "device_customer_count",
+      "mean_abs_shap": 0.2045610577188749,
+      "mean_signed_shap": -0.1552147709148046,
+      "catboost_importance": 18.97407194218439
+    },
+    {
+      "feature": "customer_degree",
+      "mean_abs_shap": 0.16809452386453555,
+      "mean_signed_shap": -0.05450277490903854,
+      "catboost_importance": 10.58651593655546
+    },
+    {
+      "feature": "customer_transactions_1h",
+      "mean_abs_shap": 0.15434744809093096,
+      "mean_signed_shap": -0.04178279306739845,
+      "catboost_importance": 5.917112613626259
+    },
+    {
+      "feature": "ip_transactions_1h",
+      "mean_abs_shap": 0.137922862029043,
+      "mean_signed_shap": -0.0918893942345133,
+      "catboost_importance": 9.199170854149363
+    },
+    {
+      "feature": "customer_transactions_1m",
+      "mean_abs_shap": 0.038173825030236086,
+      "mean_signed_shap": -0.006215090285665389,
+      "catboost_importance": 1.4711724108745245
+    }
+  ],
+  "policy_summary": [
+    {
+      "decision": "APPROVE",
+      "transactions": 88356,
+      "transaction_pct": 99.74599519084228,
+      "fraud_count": 3020,
+      "fraud_rate_pct": 3.417990855176785,
+      "fraud_capture_pct": 97.95653584171262,
+      "total_amount": 11862642.813000001,
+      "average_amount": 134.2596180564987,
+      "total_expected_loss": 387123.1840802903,
+      "average_expected_loss": 4.38140232785878
+    },
+    {
+      "decision": "VERIFY",
+      "transactions": 222,
+      "transaction_pct": 0.25061807836895045,
+      "fraud_count": 60,
+      "fraud_rate_pct": 27.027027027027028,
+      "fraud_capture_pct": 1.9461563412260785,
+      "total_amount": 284836.373,
+      "average_amount": 1283.0467252252254,
+      "total_expected_loss": 20630.197961421138,
+      "average_expected_loss": 92.92881964604116
+    },
+    {
+      "decision": "REVIEW",
+      "transactions": 0,
+      "transaction_pct": 0.0,
+      "fraud_count": 0,
+      "fraud_rate_pct": 0.0,
+      "fraud_capture_pct": 0.0,
+      "total_amount": 0.0,
+      "average_amount": 0.0,
+      "total_expected_loss": 0.0,
+      "average_expected_loss": 0.0
+    },
+    {
+      "decision": "HOLD",
+      "transactions": 3,
+      "transaction_pct": 0.003386730788769601,
+      "fraud_count": 3,
+      "fraud_rate_pct": 100.0,
+      "fraud_capture_pct": 0.09730781706130393,
+      "total_amount": 1275.0,
+      "average_amount": 425.0,
+      "total_expected_loss": 1020.0,
+      "average_expected_loss": 340.0
+    }
+  ]
+}

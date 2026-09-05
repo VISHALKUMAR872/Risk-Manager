@@ -1,0 +1,4 @@
+model,partition,roc_auc,pr_auc
+v2_priors_catboost,internal_early_stop,0.8494640093029914,0.3267264854137379
+v2_priors_catboost,calibration_raw,0.8295562480279843,0.23865647474492438
+v2_priors_catboost,future_test_raw,0.8293565954508788,0.24786584934414885

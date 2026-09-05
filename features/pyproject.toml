@@ -1,0 +1,21 @@
+[project]
+name = "risk-features"
+version = "0.1.0"
+description = "Online and offline feature definitions and feature services for Risk Sentinel."
+requires-python = ">=3.13"
+
+dependencies = [
+    "risk-engine",
+    "risk-persistence",
+]
+
+[tool.uv.sources]
+risk-engine = { path = "../risk_engine", editable = true }
+risk-persistence = { path = "../persistence", editable = true }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/risk_features"]

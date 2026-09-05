@@ -1,0 +1,89 @@
+{
+  "rows": {
+    "train": 413378,
+    "calibration": 88581,
+    "future_test": 88581
+  },
+  "fraud_rate": {
+    "train": 0.03516878014795175,
+    "calibration": 0.03434145019812375,
+    "future_test": 0.03480430340592226
+  },
+  "features": [
+    {
+      "feature": "amount",
+      "semantic_level": "GREEN",
+      "test_auc": 0.4731715674369152,
+      "test_pr_auc": 0.03712227931551147,
+      "psi_train_to_test": 0.010251511393487713
+    },
+    {
+      "feature": "customer_transactions_1h",
+      "semantic_level": "GREEN",
+      "test_auc": 0.5296022046089142,
+      "test_pr_auc": 0.03550449739635801,
+      "psi_train_to_test": 0.0023897708545748977
+    },
+    {
+      "feature": "customer_transactions_1m",
+      "semantic_level": "GREEN",
+      "test_auc": 0.5036507730970134,
+      "test_pr_auc": 0.035018496511401716,
+      "psi_train_to_test": null
+    },
+    {
+      "feature": "payment_customer_count",
+      "semantic_level": "RED",
+      "test_auc": 0.49912071130802543,
+      "test_pr_auc": 0.034745328863788186,
+      "psi_train_to_test": null
+    },
+    {
+      "feature": "merchant_transaction_count",
+      "semantic_level": "RED",
+      "test_auc": 0.33768535875067407,
+      "test_pr_auc": 0.02497664548661574,
+      "psi_train_to_test": 8.39630301373772
+    },
+    {
+      "feature": "ip_customer_count",
+      "semantic_level": "YELLOW",
+      "test_auc": 0.6605630121474789,
+      "test_pr_auc": 0.09446341175108561,
+      "psi_train_to_test": 0.8146302247920651
+    },
+    {
+      "feature": "ip_transactions_1h",
+      "semantic_level": "YELLOW",
+      "test_auc": 0.6112997849913571,
+      "test_pr_auc": 0.05502387700046294,
+      "psi_train_to_test": 0.06579882980292792
+    },
+    {
+      "feature": "customer_degree",
+      "semantic_level": "YELLOW",
+      "test_auc": 0.5205290608266386,
+      "test_pr_auc": 0.035348717049251265,
+      "psi_train_to_test": 0.32770322882806635
+    },
+    {
+      "feature": "device_customer_count",
+      "semantic_level": "YELLOW",
+      "test_auc": 0.3693707979443586,
+      "test_pr_auc": 0.027393727538063142,
+      "psi_train_to_test": 7.5696784091535605
+    },
+    {
+      "feature": "device_transactions_1h",
+      "semantic_level": "YELLOW",
+      "test_auc": 0.33804094462735496,
+      "test_pr_auc": 0.02500972617506729,
+      "psi_train_to_test": 0.38136112171288644
+    }
+  ],
+  "semantic_counts": {
+    "YELLOW": 5,
+    "GREEN": 3,
+    "RED": 2
+  }
+}

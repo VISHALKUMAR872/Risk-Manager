@@ -1,0 +1,37 @@
+{
+  "baseline": {
+    "variant": "v4_all",
+    "future_roc_auc": 0.7042895074445333,
+    "future_pr_auc": 0.096528584759912
+  },
+  "variants": [
+    {
+      "variant": "v4_all",
+      "feature_count": 10,
+      "future_roc_auc": 0.7042895074445333,
+      "future_pr_auc": 0.096528584759912,
+      "future_roc_delta_vs_v4": 0.0,
+      "future_pr_delta_vs_v4": 0.0,
+      "best_iteration": 162
+    },
+    {
+      "variant": "v4_no_red",
+      "feature_count": 8,
+      "future_roc_auc": 0.7324298906195855,
+      "future_pr_auc": 0.135981450187449,
+      "future_roc_delta_vs_v4": 0.028140383175052186,
+      "future_pr_delta_vs_v4": 0.03945286542753701,
+      "best_iteration": 231
+    },
+    {
+      "variant": "v4_no_red_no_device",
+      "feature_count": 6,
+      "future_roc_auc": 0.6727865426962129,
+      "future_pr_auc": 0.06972479072698767,
+      "future_roc_delta_vs_v4": -0.03150296474832048,
+      "future_pr_delta_vs_v4": -0.026803794032924322,
+      "best_iteration": 405
+    }
+  ],
+  "decision_rule": "Ablation results are evidence for feature selection. They do not establish production readiness."
+}

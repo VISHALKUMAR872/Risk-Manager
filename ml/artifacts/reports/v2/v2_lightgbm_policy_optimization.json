@@ -1,0 +1,300 @@
+{
+  "experiment": "V2 LightGBM exact FPR economic policy frontier",
+  "method": "probability-ranked exact-FPR intervention frontier with expected-loss severity allocation",
+  "selection_partition": "online_v5_priors_calibration.parquet",
+  "evaluation_partition": "online_v5_priors_test.parquet",
+  "future_test_locked": true,
+  "best_iteration": 122,
+  "lgf": 0.8,
+  "economic_assumptions": {
+    "verify_cost": 20.0,
+    "review_cost": 75.0,
+    "hold_cost": 150.0
+  },
+  "fpr_budgets": {
+    "LOW_FRICTION": 0.0025,
+    "BALANCED": 0.01,
+    "HEADROOM_050": 0.005,
+    "HEADROOM_060": 0.006,
+    "HEADROOM_070": 0.007,
+    "HEADROOM_080": 0.008,
+    "HEADROOM_090": 0.009
+  },
+  "calibration_rows": 88581,
+  "calibration_fraud": 3042,
+  "future_test_rows": 88581,
+  "future_test_fraud": 3083,
+  "selected_policies": {
+    "LOW_FRICTION": {
+      "intervention_count": 573,
+      "thresholds": {
+        "intervention_probability": 0.35658914728682173,
+        "verify": {
+          "expected_loss": 0.859522480620155
+        },
+        "review": {
+          "expected_loss": null
+        },
+        "hold": {
+          "expected_loss": null
+        }
+      },
+      "calibration_result": {
+        "tp": 372,
+        "fp": 201,
+        "tn": 85338,
+        "fn": 2670,
+        "precision": 0.6492146596858639,
+        "recall": 0.1222879684418146,
+        "fpr": 0.002349805351944727,
+        "intervention_rate": 0.006468655806549937,
+        "verify_count": 573,
+        "review_count": 0,
+        "hold_count": 0,
+        "loss_avoided": 56709.209599999995,
+        "intervention_cost": 11460.0,
+        "net_value": 45249.209599999995
+      }
+    },
+    "BALANCED": {
+      "intervention_count": 1430,
+      "thresholds": {
+        "intervention_probability": 0.2211652794292509,
+        "verify": {
+          "expected_loss": 0.49838625429553274
+        },
+        "review": {
+          "expected_loss": null
+        },
+        "hold": {
+          "expected_loss": null
+        }
+      },
+      "calibration_result": {
+        "tp": 594,
+        "fp": 836,
+        "tn": 84703,
+        "fn": 2448,
+        "precision": 0.4153846153846154,
+        "recall": 0.1952662721893491,
+        "fpr": 0.00977331977226762,
+        "intervention_rate": 0.016143416759801764,
+        "verify_count": 1430,
+        "review_count": 0,
+        "hold_count": 0,
+        "loss_avoided": 89034.74320000001,
+        "intervention_cost": 28600.0,
+        "net_value": 60434.74320000001
+      }
+    },
+    "MAX_RECALL_UNDER_1PCT_FPR": {
+      "intervention_count": 1455,
+      "thresholds": {
+        "intervention_probability": 0.2211652794292509,
+        "verify": {
+          "expected_loss": 0.49838625429553274
+        },
+        "review": {
+          "expected_loss": null
+        },
+        "hold": {
+          "expected_loss": null
+        }
+      },
+      "calibration_result": {
+        "tp": 600,
+        "fp": 855,
+        "tn": 84684,
+        "fn": 2442,
+        "precision": 0.41237113402061853,
+        "recall": 0.19723865877712032,
+        "fpr": 0.009995440676182793,
+        "intervention_rate": 0.016425644325532562,
+        "verify_count": 1455,
+        "review_count": 0,
+        "hold_count": 0,
+        "loss_avoided": 89262.41200000001,
+        "intervention_cost": 29100.0,
+        "net_value": 60162.41200000001
+      }
+    }
+  },
+  "future_test_results": {
+    "LOW_FRICTION": {
+      "thresholds": {
+        "intervention_probability": 0.35658914728682173,
+        "verify": {
+          "expected_loss": 0.859522480620155
+        },
+        "review": {
+          "expected_loss": null
+        },
+        "hold": {
+          "expected_loss": null
+        }
+      },
+      "tp": 389,
+      "fp": 236,
+      "tn": 85262,
+      "fn": 2694,
+      "precision": 0.6224,
+      "recall": 0.12617580278949075,
+      "fpr": 0.0027602984865143045,
+      "intervention_rate": 0.007055689143270001,
+      "verify_count": 625,
+      "review_count": 0,
+      "hold_count": 0,
+      "loss_avoided": 44499.15120000001,
+      "intervention_cost": 12500.0,
+      "net_value": 31999.151200000008
+    },
+    "BALANCED": {
+      "thresholds": {
+        "intervention_probability": 0.2211652794292509,
+        "verify": {
+          "expected_loss": 0.49838625429553274
+        },
+        "review": {
+          "expected_loss": null
+        },
+        "hold": {
+          "expected_loss": null
+        }
+      },
+      "tp": 760,
+      "fp": 1200,
+      "tn": 84298,
+      "fn": 2323,
+      "precision": 0.3877551020408163,
+      "recall": 0.24651313655530327,
+      "fpr": 0.014035416033123582,
+      "intervention_rate": 0.022126641153294723,
+      "verify_count": 1960,
+      "review_count": 0,
+      "hold_count": 0,
+      "loss_avoided": 88278.2792,
+      "intervention_cost": 39200.0,
+      "net_value": 49078.279200000004
+    },
+    "MAX_RECALL_UNDER_1PCT_FPR": {
+      "thresholds": {
+        "intervention_probability": 0.2211652794292509,
+        "verify": {
+          "expected_loss": 0.49838625429553274
+        },
+        "review": {
+          "expected_loss": null
+        },
+        "hold": {
+          "expected_loss": null
+        }
+      },
+      "tp": 760,
+      "fp": 1200,
+      "tn": 84298,
+      "fn": 2323,
+      "precision": 0.3877551020408163,
+      "recall": 0.24651313655530327,
+      "fpr": 0.014035416033123582,
+      "intervention_rate": 0.022126641153294723,
+      "verify_count": 1960,
+      "review_count": 0,
+      "hold_count": 0,
+      "loss_avoided": 88278.2792,
+      "intervention_cost": 39200.0,
+      "net_value": 49078.279200000004
+    }
+  },
+  "lgf_sensitivity": [
+    {
+      "lgf": 0.6,
+      "tp": 760,
+      "fp": 1200,
+      "tn": 84298,
+      "fn": 2323,
+      "precision": 0.3877551020408163,
+      "recall": 0.24651313655530327,
+      "fpr": 0.014035416033123582,
+      "intervention_rate": 0.022126641153294723,
+      "verify_count": 1960,
+      "review_count": 0,
+      "hold_count": 0,
+      "loss_avoided": 66208.70939999999,
+      "intervention_cost": 39200.0,
+      "net_value": 27008.709399999992
+    },
+    {
+      "lgf": 0.7,
+      "tp": 760,
+      "fp": 1200,
+      "tn": 84298,
+      "fn": 2323,
+      "precision": 0.3877551020408163,
+      "recall": 0.24651313655530327,
+      "fpr": 0.014035416033123582,
+      "intervention_rate": 0.022126641153294723,
+      "verify_count": 1960,
+      "review_count": 0,
+      "hold_count": 0,
+      "loss_avoided": 77243.49429999999,
+      "intervention_cost": 39200.0,
+      "net_value": 38043.49429999999
+    },
+    {
+      "lgf": 0.8,
+      "tp": 760,
+      "fp": 1200,
+      "tn": 84298,
+      "fn": 2323,
+      "precision": 0.3877551020408163,
+      "recall": 0.24651313655530327,
+      "fpr": 0.014035416033123582,
+      "intervention_rate": 0.022126641153294723,
+      "verify_count": 1960,
+      "review_count": 0,
+      "hold_count": 0,
+      "loss_avoided": 88278.2792,
+      "intervention_cost": 39200.0,
+      "net_value": 49078.279200000004
+    },
+    {
+      "lgf": 0.9,
+      "tp": 760,
+      "fp": 1200,
+      "tn": 84298,
+      "fn": 2323,
+      "precision": 0.3877551020408163,
+      "recall": 0.24651313655530327,
+      "fpr": 0.014035416033123582,
+      "intervention_rate": 0.022126641153294723,
+      "verify_count": 1960,
+      "review_count": 0,
+      "hold_count": 0,
+      "loss_avoided": 99313.0641,
+      "intervention_cost": 39200.0,
+      "net_value": 60113.0641
+    },
+    {
+      "lgf": 1.0,
+      "tp": 760,
+      "fp": 1200,
+      "tn": 84298,
+      "fn": 2323,
+      "precision": 0.3877551020408163,
+      "recall": 0.24651313655530327,
+      "fpr": 0.014035416033123582,
+      "intervention_rate": 0.022126641153294723,
+      "verify_count": 1960,
+      "review_count": 0,
+      "hold_count": 0,
+      "loss_avoided": 110347.849,
+      "intervention_cost": 39200.0,
+      "net_value": 71147.849
+    }
+  ],
+  "warning": "LGF and intervention costs are illustrative assumptions. Future-test labels were not used for policy selection. The intervention frontier is probability-ranked; expected loss is used for severity allocation.",
+  "artifacts": {
+    "report": "C:\\Users\\chaud\\OneDrive\\Desktop\\risk-sentinel-v2\\ml\\artifacts\\reports\\v2\\v2_lightgbm_policy_optimization.json",
+    "frontier": "C:\\Users\\chaud\\OneDrive\\Desktop\\risk-sentinel-v2\\ml\\artifacts\\reports\\v2\\v2_lightgbm_policy_frontier.csv"
+  }
+}

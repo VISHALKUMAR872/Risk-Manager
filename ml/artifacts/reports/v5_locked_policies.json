@@ -1,0 +1,51 @@
+{
+  "model": "fraud-online-v5",
+  "calibrator": "isotonic-online-v5",
+  "loss_given_fraud": 0.8,
+  "selection_dataset": "online_v4_calibration.parquet",
+  "future_test_used_for_selection": false,
+  "policies": {
+    "conservative": {
+      "verify_probability": 0.3,
+      "review_probability": 0.35,
+      "hold_probability": 0.6,
+      "verify_expected_loss": 125.0,
+      "review_expected_loss": 300.0,
+      "hold_expected_loss": 700.0,
+      "max_legitimate_challenge_rate": 0.001,
+      "calibration_loss_avoided": 21644.26720000006,
+      "calibration_loss_avoidance_rate": 0.05444741568325592,
+      "calibration_fraud_capture_rate": 0.025312294543063774,
+      "calibration_challenge_precision": 0.4935897435897436,
+      "calibration_legitimate_challenge_rate": 0.0009235553373315096
+    },
+    "balanced": {
+      "verify_probability": 0.25,
+      "review_probability": 0.3,
+      "hold_probability": 0.6,
+      "verify_expected_loss": 100.0,
+      "review_expected_loss": 300.0,
+      "hold_expected_loss": 700.0,
+      "max_legitimate_challenge_rate": 0.0025,
+      "calibration_loss_avoided": 30025.060800000036,
+      "calibration_loss_avoidance_rate": 0.07552979046075674,
+      "calibration_fraud_capture_rate": 0.03550295857988166,
+      "calibration_challenge_precision": 0.38028169014084506,
+      "calibration_legitimate_challenge_rate": 0.00205754100468792
+    },
+    "sensitive": {
+      "verify_probability": 0.25,
+      "review_probability": 0.3,
+      "hold_probability": 0.6,
+      "verify_expected_loss": 75.0,
+      "review_expected_loss": 300.0,
+      "hold_expected_loss": 700.0,
+      "max_legitimate_challenge_rate": 0.005,
+      "calibration_loss_avoided": 50320.26079999999,
+      "calibration_loss_avoidance_rate": 0.12658354897168522,
+      "calibration_fraud_capture_rate": 0.04667981591058514,
+      "calibration_challenge_precision": 0.3120879120879121,
+      "calibration_legitimate_challenge_rate": 0.0036591496276552216
+    }
+  }
+}

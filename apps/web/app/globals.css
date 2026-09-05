@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #080b10;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.risk-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 4px 9px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.risk-low {
+  background: rgba(52, 211, 153, 0.08);
+  color: rgb(110, 231, 183);
+  border: 1px solid rgba(52, 211, 153, 0.16);
+}
+
+.risk-medium {
+  background: rgba(251, 191, 36, 0.08);
+  color: rgb(252, 211, 77);
+  border: 1px solid rgba(251, 191, 36, 0.16);
+}
+
+.risk-high {
+  background: rgba(251, 146, 60, 0.08);
+  color: rgb(253, 186, 116);
+  border: 1px solid rgba(251, 146, 60, 0.16);
+}
+
+.risk-critical {
+  background: rgba(248, 113, 113, 0.08);
+  color: rgb(252, 165, 165);
+  border: 1px solid rgba(248, 113, 113, 0.16);
+}

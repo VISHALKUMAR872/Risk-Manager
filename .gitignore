@@ -1,0 +1,40 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+.pytest_cache/
+.mypy_cache/
+
+# Node
+node_modules/
+.next/
+out/
+.turbo/
+
+# Large raw datasets
+ml/data/*.csv
+
+# Generated ML datasets / feature matrices
+ml/artifacts/*.parquet
+ml/artifacts/**/*.parquet
+
+# Generated evaluation plots / temporary outputs
+ml/artifacts/**/*.png
+
+# Local ML experiment outputs
+ml/artifacts/models/*.cbm
+ml/artifacts/models/*.txt
+ml/artifacts/models/*.json
+
+# Local logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
